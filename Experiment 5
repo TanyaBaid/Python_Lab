@@ -1,0 +1,70 @@
+AIM
+
+To write a Python program to perform operations on tuples such as accessing elements, finding length, counting values, locating index, identifying maximum and minimum values, sorting elements, reversing order and iterating through the tuple.
+
+Algorithm
+Start.
+Create a tuple empdata containing employee details such as Name, Age, Address, and Phone number.
+Print the heading empdata and a separator line.
+Use a for loop to read each row in the tuple.
+Display the employee details (Name, Age, Address, Phone number) in tabular format.
+Print another separator line.
+Create another tuple t = (10, 20, 30, 40, 20).
+Print the tuple.
+Display the first element using index t[0].
+Display the last element using index t[-1].
+Find and print the length of the tuple using len().
+Find and print the maximum value using max().
+Find and print the minimum value using min().
+Find and print the sum of all elements using sum().
+Sort the tuple using sorted() and display it.
+Count the occurrences of 20 using count().
+Find the index of 30 using index().
+Stop.
+
+Source Code 
+empdata = (("Name", "Age", "Address", "Phone_no"),
+           ("Tanya", 20, "Bangalore", 9820542100),
+           ("Jiya", 22, "Ahmedabad", 9267903218))
+
+print("empdata")
+print("-" * 40)
+
+for row in empdata:
+    print(f"{row[0]} | {row[1]} | {row[2]} | {row[3]}")
+
+print("-" * 40)
+
+t = (10, 20, 30, 40, 20)
+
+print("Tuple :", t)
+print("First element :", t[0])
+print("Last element :", t[-1])
+
+print("Length :", len(t))
+print("Maximum value :", max(t))
+print("Minimum value :", min(t))
+print("Sum :", sum(t))
+print("Sorted tuple :", sorted(t))
+
+print("Count of 20 :", t.count(20))
+print("Index of 30 :", t.index(30))
+
+Output:
+empdata
+----------------------------------------
+Name | Age | Address | Phone_no
+Tanya | 20 | Bangalore | 9820542100
+Jiya | 22 | Ahmedabad | 9267903218
+----------------------------------------
+Tuple : (10, 20, 30, 40, 20)
+First element : 10
+Last element : 20
+Length : 5
+Maximum value : 40
+Minimum value : 10
+Sum : 120
+Sorted tuple : [10, 20, 20, 30, 40]
+Count of 20 : 2
+Index of 30 : 2
+
