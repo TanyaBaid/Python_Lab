@@ -1,0 +1,77 @@
+AIM
+
+To implement basic operations on dictionaries in Python such as accessing values, displaying keys and values, checking length, modifying entries, copying dictionaries and iterating through dictionary elements.
+
+Algorithm
+Start.
+Create a dictionary phonebook containing names as keys and phone numbers as values.
+Use a for loop with items() to display each name and number in the dictionary.
+Ask the user to enter a name to search.
+Check if the entered name exists in the dictionary.
+If the name exists, display the phone number of that person.
+Otherwise display “Contact invalid”.
+Display the number using the get() function.
+Display all values using values().
+Display all keys using keys().
+Display all items using items().
+Update a value in the dictionary using update().
+Display the dictionary after update.
+Delete an element using del.
+Display the dictionary after deletion.
+Remove another element using pop().
+Display the dictionary after pop operation.
+Stop.
+
+Source Code 
+phonebook = {
+                      "Tanya" : "9820458890",
+                      "Yash" : "9002054678",
+                      "Sundaram" : "9803678810",
+                      "Shivani" : "8227005496",
+                      "Shehreen" : "8256325678",
+                      "Sajan" : "7820113450"
+                      }
+
+for name, number in phonebook.items():
+                    print(f"{name} : {number}")
+
+search_name = input("Enter name to search : ")
+
+if search_name in phonebook:
+    print(f"{search_name}'s number is {phonebook[search_name]}")
+else:
+    print("Contact invalid.")
+
+print("\n--- Dictionary Methods ---")
+print("RFG:”, phonebook.get("Tanya"))
+print("Values :", phonebook.values())
+print("Keys :", phonebook.keys())
+print("Items :", phonebook.items())
+
+phonebook.update({"Shehreen" : 9900224572})
+print("After Update :", phonebook)
+
+del phonebook["Sundaram"]
+print("After delete :", phonebook)
+
+phonebook.pop("Sajan")
+print("After pop :", phonebook)
+
+Output
+Tanya : 9820458890
+Yash : 9002054678
+Sundaram : 9803678810
+Shivani : 8227005496
+Shehreen : 8256325678
+Sajan : 7820113450
+Enter name to search : Tanya
+Tanya's number is 9820458890
+
+--- Dictionary Methods ---
+RFG: 9820458890
+Values : dict_values(['9820458890', '9002054678', '9803678810', '8227005496', '8256325678', '7820113450'])
+Keys : dict_keys(['Tanya', 'Yash', 'Sundaram', 'Shivani', 'Shehreen', 'Sajan'])
+Items : dict_items([('Tanya', '9820458890'), ('Yash', '9002054678'), ('Sundaram', '9803678810'), ('Shivani', '8227005496'), ('Shehreen', '8256325678'), ('Sajan', '7820113450')])
+After Update : {'Tanya': '9820458890', 'Yash': '9002054678', 'Sundaram': '9803678810', 'Shivani': '8227005496', 'Shehreen': 9900224572, 'Sajan': '7820113450'}
+After delete : {'Tanya': '9820458890', 'Yash': '9002054678', 'Shivani': '8227005496', 'Shehreen': 9900224572, 'Sajan': '7820113450'}
+After pop : {'Tanya': '9820458890', 'Yash': '9002054678', 'Shivani': '8227005496', 'Shehreen': 9900224572}
