@@ -1,0 +1,79 @@
+AIM
+
+To write a Python program that demonstrates different list operations such as accessing elements, adding new items, copying lists, extending lists, searching elements, sorting, reversing, deleting items, counting elements and slicing lists.
+
+Algorithm
+
+Begin the program.
+Create a list containing employee information.
+Display a specific element using its index position.
+Take a role from the user and add it to the list.
+Print all items of the list using a loop.
+Create a duplicate copy of the list and display it.
+Add another list of employee details using extend.
+Search and display the position of a given element using index.
+Arrange the list elements in sorted order.
+Reverse the order of the list.
+Remove the last element using pop.
+Find how many times a particular element appears.
+Extract a part of the list using slicing and display it.
+Terminate the program.
+
+SOURCE CODE
+
+list1 = ["5G","mobile network","wireless technology","1G","2G","3G","4G","Gbps","data speeds","latency","wireless standard","network capacity","IoT","broadband","smartphones","VR","AR","uniform data","cost-per-bit","sensors","mobility","ultra reliable","communication","connectivity"]
+print(list1)
+list1[1:3] = ["internet","devices","data"]
+print(list1)
+list1.append("data")
+print("After append:",list1)
+list1.extend("5G")
+print("After extend:",list1)
+list1.remove("Gbps")
+print("After removal:",list1)
+list1.insert(2,"Fast network")
+print("After insertion:",list1)
+for i in list1:
+      print(i)
+a = list1.index("data speeds")
+print(a)
+list1.clear()
+print("After clear:",list1)
+
+Output:
+['5G', 'mobile network', 'wireless technology', '1G', '2G', '3G', '4G', 'Gbps', 'data speeds', 'latency', 'wireless standard', 'network capacity', 'IoT', 'broadband', 'smartphones', 'VR', 'AR', 'uniform data', 'cost-per-bit', 'sensors', 'mobility', 'ultra reliable', 'communication', 'connectivity']
+['5G', 'internet', 'devices', 'data', '1G', '2G', '3G', '4G', 'Gbps', 'data speeds', 'latency', 'wireless standard', 'network capacity', 'IoT', 'broadband', 'smartphones', 'VR', 'AR', 'uniform data', 'cost-per-bit', 'sensors', 'mobility', 'ultra reliable', 'communication', 'connectivity']
+After append: ['5G', 'internet', 'devices', 'data', '1G', '2G', '3G', '4G', 'Gbps', 'data speeds', 'latency', 'wireless standard', 'network capacity', 'IoT', 'broadband', 'smartphones', 'VR', 'AR', 'uniform data', 'cost-per-bit', 'sensors', 'mobility', 'ultra reliable', 'communication', 'connectivity', 'data']
+After extend: ['5G', 'internet', 'devices', 'data', '1G', '2G', '3G', '4G', 'Gbps', 'data speeds', 'latency', 'wireless standard', 'network capacity', 'IoT', 'broadband', 'smartphones', 'VR', 'AR', 'uniform data', 'cost-per-bit', 'sensors', 'mobility', 'ultra reliable', 'communication', 'connectivity', 'data', '5', 'G']
+After removal: ['5G', 'internet', 'devices', 'data', '1G', '2G', '3G', '4G', 'data speeds', 'latency', 'wireless standard', 'network capacity', 'IoT', 'broadband', 'smartphones', 'VR', 'AR', 'uniform data', 'cost-per-bit', 'sensors', 'mobility', 'ultra reliable', 'communication', 'connectivity', 'data', '5', 'G']
+After insertion: ['5G', 'internet', 'Fast network', 'devices', 'data', '1G', '2G', '3G', '4G', 'data speeds', 'latency', 'wireless standard', 'network capacity', 'IoT', 'broadband', 'smartphones', 'VR', 'AR', 'uniform data', 'cost-per-bit', 'sensors', 'mobility', 'ultra reliable', 'communication', 'connectivity', 'data', '5', 'G']
+5G
+internet
+Fast network
+devices
+data
+1G
+2G
+3G
+4G
+data speeds
+latency
+wireless standard
+network capacity
+IoT
+broadband
+smartphones
+VR
+AR
+uniform data
+cost-per-bit
+sensors
+mobility
+ultra reliable
+communication
+connectivity
+data
+5
+G
+9
+After clear: []
