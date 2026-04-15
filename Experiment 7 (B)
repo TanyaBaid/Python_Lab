@@ -1,0 +1,91 @@
+Aim
+To impement Inheritance
+
+Algorithm: Single Inheritance
+Step 1:Define a parent class family with a method relation.
+Step 2:Define a child class relatives that inherits from family.
+Step 3:Create an instance r of the relatives class.
+Step 4:Call the inherited method relation() and the class's own method relation1().
+
+Code: Single Inheritance
+class family:
+    def relation(self):
+        print("This is Family")
+
+class relatives(family):
+    def relation1(self):
+        print("This is Relatives")
+
+r = relatives()
+r.relation()
+r.relation1()
+
+Output: Single Inheritance
+This is Family
+This is Relatives
+
+
+Algorithm: Multiple Inheritance
+Step 1:Define two independent classes: Writer and Speaker.
+Step 2:Define class Author that inherits from both Writer and Speaker.
+Step 3:The Author object a now has access to methods from all three classes.
+Step 4:Execute methods sequentially to take user input and display it.
+
+Code: Multiple Inheritance
+class Writer:
+    def write(self):
+        self.write_name = input("Enter writer name: ")
+        print(self.write_name)
+
+class Speaker:
+    def speak(self):
+        self.speak_name = input("Enter speaker name: ")
+        print(self.speak_name)
+
+class Author(Writer, Speaker):
+    def role(self):
+        self.author_name = input("Enter author name: ")
+        print(self.author_name)
+
+a = Author()
+a.write()
+a.speak()
+a.role()
+
+Output: Multiple Inheritance
+Enter writer name: Navratan
+Navratan
+Enter speaker name: Sanjay
+Sanjay
+Enter author name: Prakash
+Prakash
+
+ALGORITHM: MULTILEVEL INHERITANCE
+Step 1:Create a base class School.
+Step 2:Create a derived class Student that inherits from School.
+Step 3:Create a further derived class Monitor that inherits from Student.
+Step 4:The Monitor object inherits the entire chain of attributes and methods.
+
+CODE: MULTILEVEL INHERITANCE
+class School:
+    def school_name(self):
+        print("ABC School")
+
+class Student(School):
+    def student_name(self):
+        print("Student of the School")
+
+class Monitor(Student):
+    def duty(self):
+        print("Monitor of the class")
+
+m = Monitor()
+m.school_name()
+m.student_name()
+m.duty()
+
+OUTPUT: MULTILEVEL INHERITANCE
+ABC School
+Student of the School
+Monitor of the class
+
