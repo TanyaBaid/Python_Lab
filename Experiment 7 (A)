@@ -1,0 +1,75 @@
+AIM
+To create class with and without object
+
+Algorithm: Class with Object
+Step 1:Start
+Step 2:Define a class Student
+Step 3:Assign values to variables: name, age, address
+Step 4:Create an object of the class
+Step 5:Access and print the values using the object
+Step 6:Stop
+
+Code: Class with Object
+class Student:
+    name = "Tanya"
+    age = "20"
+    address = "Bangalore"
+
+details = Student()
+
+print("Name is", details.name)
+print("Age is", details.age)
+print("Address is", details.address)
+
+Output: Class with Object
+Name is Tanya
+Age is 20
+Address is Bangalore
+
+
+
+ALGORITHM: CLASS WITHOUT OBJECT 
+Step 1:Start
+Step 2:Define a class Student
+Step 3:Take input for name and USN
+Step 4:Take input for 5 subject marks
+Step 5:Define a method total_marks()
+Step 6:Calculate total marks by adding all marks
+Step 7:Print total marks, name, and USN
+Step 8:Create object of class
+Step 9:Call the method using object
+Step 10:Stop
+
+CODE: CLASS WITHOUT OBJECT 
+class Student:
+    name = input("Enter the name: ")
+    usn = input("Enter the usn: ")
+    marks1 = int(input("Enter the marks1: "))
+    marks2 = int(input("Enter the marks2: "))
+    marks3 = int(input("Enter the marks3: "))
+    marks4 = int(input("Enter the marks4: "))
+    marks5 = int(input("Enter the marks5: "))
+
+    def total_marks(self):
+        total = (self.marks1 + self.marks2 + self.marks3 +
+                 self.marks4 + self.marks5)
+        print("Total Marks:", total)
+        print("Name:", self.name)
+        print("USN:", self.usn)
+
+
+obj = Student()
+obj.total_marks()
+
+OUTPUT: CLASS WITHOUT OBJECT 
+Enter the name: Tanya
+Enter the usn: 24BCAR0520
+Enter the marks1: 80
+Enter the marks2: 91
+Enter the marks3: 88
+Enter the marks4: 75
+Enter the marks5: 94
+Total Marks: 428
+Name: Tanya
+USN: 24BCAR0520
+
