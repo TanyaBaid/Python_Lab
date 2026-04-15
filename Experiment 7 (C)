@@ -1,0 +1,66 @@
+Aim
+To implement Polymorphism
+
+Algorithm: Method Overloading
+Step 1:Define a method with default parameters set to None.
+Step 2:Inside the method, use if-elif-else logic to check how many arguments were provided.
+Step 3:Perform the operation based on the count of non-null arguments.
+
+
+Code: Method Overloading
+class Add:
+    def sum(self, a=None, b=None, c=None):
+        if a is not None and b is not None and c is not None:
+            print(a + b + c)
+        elif a is not None and b is not None:
+            print(a + b)
+        else:
+            print(a)
+
+obj = Add()
+obj.sum(5)
+obj.sum(5, 10)
+obj.sum(5, 10, 15)
+
+
+Output: Method Overloading
+5
+15
+30
+
+
+Algorithm: Method Overriding
+Step 1:Define a base class Family with a show() method.
+Step 2:Define multiple child classes that inherit from Family.
+Step 3:In each child class, redefine the show() method with a unique print statement.
+Step 4:When called, the child's version of the method "overrides" the parent's version.
+
+Code: Method Overriding
+class Family:
+    def show(self):
+        print("This is a family")
+
+class Father(Family):
+    def show(self):
+        print("Father is working")
+
+class Mother(Family):
+    def show(self):
+        print("Mother is cooking")
+
+class Daughter(Family):
+    def show(self):
+        print("Daughter is studying")
+
+f = Father()
+m = Mother()
+d = Daughter()
+
+f.show()
+m.show()
+d.show()
+
+Output: Method Overriding
+Father is working
+Mother is cooking
+Daughter is studying
