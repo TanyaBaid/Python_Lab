@@ -1,0 +1,43 @@
+AIM
+Write a program to implement Matplotlib and Pandas Libraries in python
+
+ALGORITHM 
+Step 1: Start
+Step 2: Import Pandas and Matplotlib
+Step 3: Create student data (name and marks)
+Step 4: Convert data into DataFrame
+Step 5: Display DataFrame
+Step 6: Use Matplotlib to create bar graph
+Step 7: Set labels for X-axis and Y-axis
+Step 8: Give title to graph
+Step 9: Display the graph
+Step 10: Stop
+
+
+CODE
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Name": ["Tanya", "Shivani", "Jiya", "Udita"],
+    "Marks": [85, 92, 78, 88]
+}
+
+df = pd.DataFrame(data)
+
+print("DataFrame:\n", df)
+plt.bar(df["Name"], df["Marks"])
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.title("Students Marks Graph")
+
+plt.show()
+
+
+OUTPUT
+DataFrame:
+       Name     Marks
+0      Tanya    85
+1      Shivani  92
+2      Jiya     78
+3      Udita    88
